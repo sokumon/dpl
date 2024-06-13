@@ -1,5 +1,5 @@
 import click
-from appscript import  send_to_sheet
+from dpl.appscript import  send_to_sheet
 
 @click.command()
 @click.option('-t', '--task', required=True, help='The task to be added')
