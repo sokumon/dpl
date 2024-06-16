@@ -1,8 +1,10 @@
 import requests
 import json
-
+from dpl.config import *
 def send_to_sheet(task,remarks,eodStatus):
-    url = "https://script.google.com/macros/s/AKfycbxvo1Jb1MSRsQAeT7bLsw-sS4wwOKIXOqaXoBPylkSPj0slyJqYg1eMrLxBhstJiqIK/exec"
+    url = reader()
+    if url is None:
+        return None
 
     payload = json.dumps({
     "task": task,
